@@ -5,6 +5,8 @@ import leaders from "./assets/TeamsData/data";
 import consultants from "./assets/TeamsData/consultants";
 import electrical from "./assets/TeamsData/electrical";
 import civil from "./assets/TeamsData/civil";
+import information from "./assets/TeamsData/information";
+import Footer from "./Footer";
 const Teams = () => {
   return (
     <section className="teams">
@@ -79,7 +81,21 @@ const Teams = () => {
           })}
         </div>
       </div>
-      
+      <div className="informationTech">
+        <h1>Information Technology Team</h1>
+        <div className="informationTechs">
+          {information.map((information, index) => {
+            return (
+              <div className="informationTech" key={index}>
+                <img src={information.image} alt="information" />
+                <h1>{information.name}</h1>
+                <h2>{information.position}</h2>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <Footer />
     </section>
   );
 };
